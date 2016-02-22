@@ -27,7 +27,9 @@ Emacs Plug-ins
 This configuration uses [`el-get`](https://github.com/dimitri/el-get "el-get repo")
 in order to install and manage Emacs Lisp plug-ins. The plug-ins that are used
 are listed below:
+
 - `auto-complete`: Auto-completion of text in Emacs ([auto-complete repo](https://github.com/auto-complete/auto-complete))
 - `jedi`: Useful auto-completion package for Python ([jedi repo](https://github.com/tkf/emacs-jedi))
+
 Several additional plug-ins are required as dependencies for these plug-ins to
 work, but `el-get` should be able to handle these dependencies rather transparently.
