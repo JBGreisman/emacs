@@ -1,0 +1,112 @@
+((("load-theme" .
+   [0 0 0 0 0 0 0 0 0 2])
+  ("custom-theme-load-path" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("add-to-list" .
+   [0 0 0 1 0 0 0 0 0 0 0])
+  ("myMarkCol" .
+   [0 0 0 2 0 0 0 0 4])
+  ("myIndentUsingSpaces" .
+   [0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("sh-mode-hook" .
+   [0 0 0 0 0 0 0 0 0 0 0 2])
+  ("sh-script" .
+   [0 0 0 0 0 1 0 0 0])
+  ("add-hook" .
+   [0 0 0 0 0 0 0 2])
+  ("concat" .
+   [2 0 0 0 0 0])
+  ("make-string" .
+   [0 0 0 0 0 0 0 0 0 0 2])
+  ("string" .
+   [1 0 0 0 0 0])
+  ("insert" .
+   [2 0 0 0 0 1])
+  ("dotimes-with-progress-reporter" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("python-mode-map" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("load" .
+   [1 0 0 0])
+  ("run-python" .
+   [1 0 0 0 0 0 0 0 0 1])
+  ("global-set-key" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("python-shell-internal-buffer-name" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ipython" .
+   [2 0 1 0 0 0 0])
+  ("require" .
+   [3 0 0 0 0 0 0])
+  ("make_dataFrame" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("df" .
+   [7 1])
+  ("figure" .
+   [3 0 0 1 0 0])
+  ("fill" .
+   [0 1 0 0])
+  ("Figure" .
+   [0 0 0 0 0 1])
+  ("pyplot" .
+   [0 0 1 0 0 0])
+  ("matplotlib" .
+   [0 0 0 0 0 1 1 0 0 0])
+  ("DataFrame" .
+   [0 1 0 0 0 2 0 0 0])
+  ("savefig" .
+   [0 0 0 1 0 0 0])
+  ("plt" .
+   [5 0 0])
+  ("sys" .
+   [0 0 1])
+  ("argv" .
+   [1 0 0 1])
+  ("x" .
+   [5])
+  ("range" .
+   [0 0 0 0 1])
+  ("id" .
+   [0 2])
+  ("i" .
+   [1])
+  ("pandas" .
+   [1 0 0 1 0 0])
+  ("pbr" .
+   [0 1 0])
+  ("pd" .
+   [3 0])
+  ("vals" .
+   [3 0 0 1])
+  ("dictionary" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("python-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("setq" .
+   [1 0 0 0])
+  ("Python" .
+   [1 0 0 0 0 0])
+  ("python-shell-buffer-name" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("python-shell-buffer-substring" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("python-buffer" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("python-shell-get-process-name" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("shell-file-name" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("fix-lisp-comments" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("hello" .
+   [1 0 0 0 0])
+  ("set-frame-parameter" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("nil" .
+   [2 0 0])
+  ("set-terminal-parameter" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("background-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("dark" .
+   [1 0 0 0])))
