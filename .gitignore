@@ -1,0 +1,5 @@
+*~
+*.elc
+.emacs.d/el-get/*
+.emacs.d/.python-environments/*
+.emacs.d/ac-comphist.dat
