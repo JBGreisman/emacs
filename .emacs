@@ -27,8 +27,7 @@
 ;;----------------------------------------------------------------------
 
 ;; Display characters in columns 72 and 73 using unusual background
-;; colors, thus making it easy to spot lines that are longer than 72
-;; characters.
+;; colors to make it easy to spot lines longer than 72 characters
 (require 'column-marker)
 (defun myMarkCol ()
    (interactive)

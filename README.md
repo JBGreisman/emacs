@@ -1,9 +1,9 @@
 Emacs Configuration
 ===================
 
-This repo stores my current configuration files for using
-emacs as my IDE of choice. I primarily work in Python nowadays, so this
-configuration is quite biased towards using emacs for Python programming.
+This repo stores my current configuration files for Emacs. I primarily work in
+Python nowadays, so this configuration is quite biased towards using Emacs for
+Python programming.
 
 For reference, I have tested this configuration using the following version(s):
 - GNU Emacs 24.5.1 (x86_64-apple-darwin13.4.0) of 2015-08-11
@@ -32,4 +32,4 @@ are listed below:
 - `jedi`: Useful auto-completion package for Python ([jedi repo](https://github.com/tkf/emacs-jedi))
 
 Several additional plug-ins are required as dependencies for these plug-ins to
-work, but `el-get` should be able to handle these dependencies rather transparently.
+work, but `el-get` should automatically install these as well
