@@ -6,7 +6,7 @@ Python nowadays, so this configuration is quite biased towards using Emacs for
 Python programming.
 
 The general organization of these configuration files and some of the settings
-are based on jhamrick's [`emacs configuration`]("https://github.com/jhamrick/emacs")
+are based on jhamrick's [emacs configuration](https://github.com/jhamrick/emacs)
 
 For reference, I have tested this configuration using the following version(s):
 - GNU Emacs 24.5.1 (x86_64-apple-darwin13.4.0) of 2015-08-11
