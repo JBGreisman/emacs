@@ -20,6 +20,14 @@
 
 ;;----------------------------------------------------------------------
 
+;; Packages to install
+(setq
+ my-packages '(el-get
+	       jedi
+	       ))
+
+;;----------------------------------------------------------------------
+
 ;; Use shallow git clones because we don't need the entire version
 ;; history for each project
 (setq el-get-git-shallow-clone t)
@@ -27,7 +35,7 @@
 ;;----------------------------------------------------------------------
 
 ;; Install packages
-(el-get 'sync)
+(el-get 'sync my-packages)
 
 ;;----------------------------------------------------------------------
 
