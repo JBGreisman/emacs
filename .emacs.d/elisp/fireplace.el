@@ -2,7 +2,6 @@
 
 ;; Copyright (C) 2015 Johan Sivertsen
 ;;; Version: 1.1.1
-;; Package-Version: 20160101.1047
 ;;; Author: Johan Sivertsen <johanvts@gmail.com>
 ;;; URL: https://github.com/johanvts/emacs-fireplace
 ;;; Released: December 2015
@@ -112,23 +111,23 @@
          (hot-core (/ actual-width 2)))
     (delete-char actual-width)
     (insert (propertize (make-string actual-width fireplace-fill-char)
-                        'face 'fireplace-outter-flame-face))
+      'face 'fireplace-outter-flame-face))
     (when (> hot-core 1)
       (fireplace--gotoxy (+ x (/ hot-core 2)) y)
       (delete-char hot-core)
       (insert (propertize (make-string hot-core fireplace-fill-char)
-                          'face 'fireplace-inner-flame-face)))))
+              'face 'fireplace-inner-flame-face)))))
 
 (defun fireplace--smoke (x height)
   "Draw one random smoke."
   (fireplace--gotoxy
-   (if (>(random 3) 1)
-       (+ x (random (/ fireplace--bkgd-width 5)))
-     (max 0 (- x (random (/ fireplace--bkgd-width 5)))))
-   (+ height (random (- fireplace--bkgd-height height))))
+    (if (>(random 3) 1)
+        (+ x (random (/ fireplace--bkgd-width 5)))
+        (max 0 (- x (random (/ fireplace--bkgd-width 5)))))
+    (+ height (random (- fireplace--bkgd-height height))))
   (delete-char 1)
   (insert (propertize (make-string 1 fireplace-smoke-char)
-                      'face 'fireplace-smoke-face)))
+          'face 'fireplace-smoke-face)))
 
 (defun fireplace--flame (middle h)
   "Draw a flame."
@@ -166,8 +165,8 @@
     (fireplace--make-grid)
     (dolist (pos fireplace--flame-pos)
       (fireplace--flame (round (* pos fireplace--bkgd-width))
-                        (+ (round (* (+ 0.2 (min pos (- 1 pos))) fireplace--flame-width))
-                           (random 3))))
+       (+ (round (* (+ 0.2 (min pos (- 1 pos))) fireplace--flame-width))
+          (random 3))))
     (setq buffer-read-only t)))
 
 (defun fireplace--disable-minor-modes ()
@@ -181,7 +180,7 @@
   (transient-mark-mode nil)
   (buffer-disable-undo))
 
-(defun fireplace--update-locals-vars ()
+(defun fireplace--update-locals-vars (&optional frame)
   "Update `fireplace' local variables."
   (setq fireplace--bkgd-height (- (floor (window-height (get-buffer-window fireplace-buffer-name))) 1)
         fireplace--bkgd-width  (- (round (window-width (get-buffer-window fireplace-buffer-name))) 1)
@@ -231,9 +230,9 @@
 
 (define-derived-mode fireplace-mode special-mode  "A cozy fireplace.")
 
-(define-key fireplace-mode-map "\C-c+" 'fireplace-down)
-(define-key fireplace-mode-map "\C-c-" 'fireplace-up)
-(define-key fireplace-mode-map "\C-c*" 'fireplace-toggle-smoke)
+(define-key fireplace-mode-map (kbd "C-+") 'fireplace-down)
+(define-key fireplace-mode-map (kbd "C--") 'fireplace-up)
+(define-key fireplace-mode-map (kbd "C-*") 'fireplace-toggle-smoke)
 (define-key fireplace-mode-map (kbd "q") 'fireplace-off)
 (define-key fireplace-mode-map (kbd "Q") 'fireplace-off)
 
