@@ -18,6 +18,9 @@
 (add-to-list 'python-shell-completion-native-disabled-interpreters
              "jupyter")
 
+;; Enable black to run on save
+(add-hook 'python-mode-hook 'blacken-mode)
+
 ;; Enable Flycheck
 (when (require 'flycheck nil t)
   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
