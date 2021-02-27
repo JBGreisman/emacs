@@ -6,14 +6,45 @@
 ;; launched.
 ;;======================================================================
 
-;; Tell Emacs where to find Emacs Lisp files
+;; =====================================================================
+;; MELPA Package Support
+;; =====================================================================
+;; Enables basic packaging support
 
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
+(require 'package)
+
+;; Adds the Melpa archive to the list of available repositories
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") t)
+
+;; Initializes the package infrastructure
 (package-initialize)
 
+;; If there are no archived package contents, refresh them
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+;; myPackages contains a list of package names
+(defvar myPackages
+  '(better-defaults                 ;; Set up some better Emacs defaults
+    elpy                            ;; Python environment
+    flycheck                        ;; On the fly syntax checking
+    blacken                         ;; Black formatting on save
+    material-theme                  ;; Theme
+    )
+  )
+
+;; If the package listed is not already installed, install it
+(mapc #'(lambda (package)
+          (unless (package-installed-p package)
+            (package-install package)))
+      myPackages)
+
+;; =====================================================================
+;; Additional customizations
+;; =====================================================================
+
+;; Tell Emacs where to find Emacs Lisp files
 (add-to-list 'load-path "~/.emacs.d/elisp")
 
 ;;----------------------------------------------------------------------
@@ -23,44 +54,29 @@
 
 ;;----------------------------------------------------------------------
 
-;; Use el-get as package manager for Emacs Lisp plug-ins
-(require 'el-get-settings)
-
-;;----------------------------------------------------------------------
-
 ;; Python IDE
 (require 'python-settings)
-
-;;----------------------------------------------------------------------
-
-;; Display characters in columns 72 and 73 using unusual background
-;; colors to make it easy to spot lines longer than 72 characters
-(require 'column-marker)
-(defun myMarkCol ()
-   (interactive)
-   (column-marker-2 72))
-(add-hook 'c-mode-hook 'myMarkCol)
-(add-hook 'asm-mode-hook 'myMarkCol)
-(add-hook 'java-mode-hook 'myMarkCol)
-(add-hook 'python-mode-hook 'myMarkCol)
-(add-hook 'emacs-lisp-mode-hook 'myMarkCol)
-(add-hook 'sh-mode-hook 'myMarkCol)
 
 ;;----------------------------------------------------------------------
 
 ;; Fireplace mode -- just for kicks
 (require 'fireplace)
 
-;;----------------------------------------------------------------------
+;; =====================================================================
+;; Automated additions to settings
+;; =====================================================================
 
-;; Bind the "Control-x p" key sequence to writing a line of "#'s"
-(defun insert-divider1()
-  (interactive)
-  (insert (concat (make-string 72 ?#) "\n")))
-(global-set-key "\C-xp" 'insert-divider1)
-
-;; Bind the "Control p" key sequence to writing a line of "#'s"
-(defun insert-divider2()
-  (interactive)
-  (insert (concat "#" (make-string 70 ?-) "#" "\n")))
-(global-set-key "\C-p" 'insert-divider2)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (material-theme blacken flycheck elpy better-defaults))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

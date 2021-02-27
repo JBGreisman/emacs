@@ -5,22 +5,23 @@
 ;; Settings for using Emacs as a Python IDE
 ;;======================================================================
 
-;; I opted for python.el, but python-mode.el is another popular option
-(require 'python)
+;; ====================================
+;; Development Setup
+;; ====================================
+;; Enable elpy
+(elpy-enable)
 
-;;----------------------------------------------------------------------
+;; Use IPython for REPL
+(setq python-shell-interpreter "jupyter"
+      python-shell-interpreter-args "console --simple-prompt"
+      python-shell-prompt-detect-failure-warning nil)
+(add-to-list 'python-shell-completion-native-disabled-interpreters
+             "jupyter")
 
-;; Use IPython as the Python shell and alias run-python command
-(setq python-shell-interpreter "ipython"
-      python-shell-buffer-name "IPython Shell")
-(defalias 'ipython 'run-python)
-(defalias 'python 'run-python)
-
-;;----------------------------------------------------------------------
-
-;; Python autocompletion using jedi.el
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:complete-on-dot t)
+;; Enable Flycheck
+(when (require 'flycheck nil t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
 
 ;;----------------------------------------------------------------------
 
