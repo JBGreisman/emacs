@@ -15,7 +15,7 @@
 
 ;; Adds the Melpa archive to the list of available repositories
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/") t)
+             '("melpa" . "https://stable.melpa.org/packages/") t)
 
 ;; Initializes the package infrastructure
 (package-initialize)
