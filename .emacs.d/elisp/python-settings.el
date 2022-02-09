@@ -19,7 +19,9 @@
              "jupyter")
 
 ;; Enable black to run on save
-(add-hook 'python-mode-hook 'blacken-mode)
+(add-hook 'elpy-mode-hook (lambda ()
+                            (add-hook 'before-save-hook
+                                      'elpy-black-fix-code nil t)))
 
 ;; Enable Flycheck
 (when (require 'flycheck nil t)
